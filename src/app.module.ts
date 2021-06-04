@@ -12,6 +12,7 @@ import 'dotenv/config';
     MongooseModule.forRoot(process.env.DB_STRING),
     TodosModule,
     AuthModule,
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
