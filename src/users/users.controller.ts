@@ -16,13 +16,13 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   // get a user
-  @Get(':username')
-  getUser(@Param('username') username: string): Promise<User> {
-    return this.usersService.getUser(username);
+  @Get(':email')
+  getUser(@Param('email') email: string): Promise<User> {
+    return this.usersService.getUser(email);
   }
   // create a user
   @Post()
-  createTodoItem(@Body() createUserDto: CreateUserDto): Promise<User> {
+  createUser(@Body() createUserDto: CreateUserDto): Promise<User> {
     return this.usersService.createUser(createUserDto);
   }
 }
